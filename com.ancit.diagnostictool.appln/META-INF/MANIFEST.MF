@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Appln
+Bundle-SymbolicName: com.ancit.diagnostictool.appln;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.ancit.diagnostictool.appln.Activator
+Bundle-Vendor: ANCIT
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.intro
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Import-Package: org.w3c.css.sac.helpers;version="1.3.0"
+Bundle-ClassPath: lib/jna-5.4.0.jar,
+ lib/jna-platform-5.2.0.jar,
+ .

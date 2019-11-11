@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.ancit.diagnostictool.appln.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.ancit.diagnostictool.appln.Perspective"
+            icon="icons/welcome16@2x.png"
+            id="com.ancit.diagnostictool.appln.perspective"
+            name="Welcome">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.ancit.diagnostictool.appln.application"
+            name="ANCIT - Test Specification Tool">
+         <property
+               name="windowImages"
+               value="icons/eclipse16.png,icons/eclipse32.png,icons/eclipse48.png,icons/eclipse64.png, icons/eclipse128.png,icons/eclipse256.png">
+         </property>
+         <property
+               name="appName"
+               value="ANCIT - Test Specification Tool">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/eclipse128.png">
+         </property>
+         <property
+               name="aboutText"
+               value="Ancit Consulting&#x0A;Name   :  CANOE Test Case Generator &#x0A;Vestion : 1.0.0">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.ancit.diagnostictool.appln.ANCITLaunchScreen"
+            id="com.ancit.diagnostictool.appln.ANCITLaunchScreen"
+            name="Welcome"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="com.ancit.diagnostictool.appln.perspective">
+         <view
+               closeable="false"
+               id="com.ancit.diagnostictool.appln.ANCITLaunchScreen"
+               minimized="false"
+               moveable="false"
+               ratio="1f"
+               relationship="top"
+               relative="org.eclipse.ui.editorss"
+               showTitle="false"
+               standalone="false"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            content="com.ancit.diagnostictool.appln.config1"
+            id="com.ancit.diagnostictool.appln.config1"
+            introId="com.ancit.diagnostictool.appln.config1">
+         <presentation
+               home-page-id="com.ancit.diagnostictool.appln.presentation1">
+            <implementation
+                  kind="html">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+   
+   
+
+</plugin>
